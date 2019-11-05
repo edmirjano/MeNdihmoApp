@@ -1,0 +1,11 @@
+<ion-content color="light" padding>
+  <h1 padding>No Internet Connection</h1>
+  <h4 padding>Please connect to the internet to enable App functionality</h4>
+  <ion-img src="../../../assets/icon/no_network.png" padding></ion-img>
+  <ion-button color="primary" (click)="refresh()">
+    Refresh
+  </ion-button>
+  <ion-button color="danger" (click)="close()" *ngIf="isAndroid">
+    Close
+  </ion-button>
+</ion-content>
