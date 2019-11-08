@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "WebView",
+  "appId": "com.edi.health",
+  "appName": "HealthCare",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
