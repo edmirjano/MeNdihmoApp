@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>WebView</string>
+        <string>HealthCare</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -18,10 +18,6 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
-    <key>NSHealthUpdateUsageDescription</key>
-    <string>some string value stating the reason just to know it mf</string>
-    <key>NSHealthShareUsageDescription</key>
-    <string>some string value stating the reason mf son of b</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>

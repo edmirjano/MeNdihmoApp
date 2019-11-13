@@ -8,9 +8,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { InAppBrowser } from '@ionic-native/in-app-browser/ngx';
-import { Pedometer } from '@ionic-native/pedometer/ngx';
-import { Health } from '@ionic-native/health/ngx';
+import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,9 +18,7 @@ import { Health } from '@ionic-native/health/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    InAppBrowser,
-    Pedometer,
-    Health
+    NativeGeocoder
   ],
   bootstrap: [AppComponent]
 })

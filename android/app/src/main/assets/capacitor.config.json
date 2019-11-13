@@ -1,8 +1,0 @@
-{
-  "appId": "com.edi.health",
-  "appName": "HealthCare",
-  "bundledWebRuntime": false,
-  "npmClient": "npm",
-  "webDir": "www",
-  "cordova": {}
-}

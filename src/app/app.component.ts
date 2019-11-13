@@ -11,6 +11,37 @@ import { Router } from '@angular/router';
   styleUrls: ['app.component.scss']
 })
 export class AppComponent {
+  public sidemenuLayout1 = [
+    {
+      title: 'Home',
+      icon: 'home',
+      active: true
+    },
+    {
+      title: 'My Wallet',
+      icon: 'wallet'
+    },
+    {
+      title: 'History',
+      icon: 'time'
+    },
+    {
+      title: 'Notif',
+      icon: 'notifications'
+    },
+    {
+      title: 'Invite',
+      icon: 'gift'
+    },
+    {
+      title: 'Settings',
+      icon: 'settings'
+    },
+    {
+      title: 'Logout',
+      icon: 'log-out'
+    },
+  ];
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,

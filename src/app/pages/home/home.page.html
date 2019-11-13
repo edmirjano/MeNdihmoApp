@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-title>Më Ndihmo</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding color="light">
+  <h1>Mirëserdhe, {{adres}}</h1>
+  <ion-list-header>
+    <ion-label>Për çfarë keni nevojë?</ion-label>
+  </ion-list-header>
+  <ion-list color="light" padding>
+    <ion-button (click)="alarm()" color="danger" size="large" strong>
+      Nuk Ndihem mirë
+    </ion-button>
+  </ion-list>
+  <ion-list color="light" padding>
+    <ion-button (click)="callPolice()" color="primary" size="large" strong>
+      Policia
+    </ion-button>
+  </ion-list>
+  <ion-list color="light" padding>
+    <ion-button (click)="callFire()" color="warning" size="large" strong>
+      Zjarrfikësja
+    </ion-button>
+  </ion-list>
+  <ion-list color="light" padding>
+    <ion-button (click)="callDoc()" color="tertiary" size="large" strong>
+      Mjeku/Infermierja
+    </ion-button>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>All rights reserved</ion-title>
+  </ion-toolbar>
+</ion-footer>
