@@ -1,9 +1,35 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar color="medium">
+    <ion-title>Më Ndihmo</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content padding color="light">
+  <div class="ion-padding">
+    <div class="ion-padding">
+      <ion-img src="../../../assets/logotranspar.png" class="ion-padding"></ion-img>
+    </div>
+  </div>
+  <ion-list class="ion-padding">
+    <ion-input placeholder="Emri juaj" color="danger"></ion-input>
+  </ion-list>
+  <ion-grid fixed class="ion-padding">
+    <ion-row class="ion-padding">
+      <ion-col>
+      </ion-col>
+      <ion-col>
+        <ion-button (click)="alarm()" color="danger" size="large" expand="block" strong>
+          Rregjistrohu
+        </ion-button>
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div text-right padding>
+      <a id="registerLink" [routerLink]="['/register']" routerLinkActive="router-link-active">Logohu si Donator/Vullnetar</a>
+    </div>
 </ion-content>

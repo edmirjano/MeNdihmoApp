@@ -18,6 +18,11 @@
     </ion-button>
   </ion-list>
   <ion-list color="light" padding>
+    <ion-button (click)="callPolice()" color="success" size="large" strong>
+      Familja
+    </ion-button>
+  </ion-list>
+  <ion-list color="light" padding>
     <ion-button (click)="callPolice()" color="primary" size="large" strong>
       Policia
     </ion-button>
@@ -34,8 +39,15 @@
   </ion-list>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar>
-    <ion-title>All rights reserved</ion-title>
+<ion-footer no-border>
+  <ion-toolbar color="light">
+    <ion-label>
+      <ion-text style="text-align: center;    font-size: 10px;">
+        <div>Versioni 1.0.1</div>
+      </ion-text>
+      <ion-text style="text-align: center;    font-size: 10px;">
+        <div> ©  EP .All Rights Reserved</div>
+      </ion-text>
+    </ion-label>
   </ion-toolbar>
 </ion-footer>
