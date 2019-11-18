@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Plugins } from '@capacitor/core';
+import { CallNumber } from '@ionic-native/call-number/ngx';
 import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
 
 const { Geolocation } = Plugins;
@@ -19,7 +20,7 @@ export class HomePage implements OnInit {
 
   adres = '';
 
-  constructor(private nativeGeocoder: NativeGeocoder) {
+  constructor(private nativeGeocoder: NativeGeocoder,private callNumber: CallNumber) {
     let options: NativeGeocoderOptions = {
       useLocale: true,
       maxResults: 5
@@ -60,10 +61,14 @@ export class HomePage implements OnInit {
   }
 
   callPolice() {
-
+    this.callNumber.callNumber("129", true)
+  .then(res => console.log('Launched dialer!', res))
+  .catch(err => console.log('Error launching dialer', err));
   }
   callFire() {
-
+    this.callNumber.callNumber("00355696382292", true)
+    .then(res => console.log('Launched dialer!', res))
+    .catch(err => console.log('Error launching dialer', err));
   }
   callDoc() {
 

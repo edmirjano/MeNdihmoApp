@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileoldPage implements OnInit {
 
+  punaSelected = true;
+  vleresimeSelected = false;
+  kompaniaSelected = false;
+  
   constructor() { }
 
   ngOnInit() {
+  }
+  segmentButtonClicked(i) {
+    if (i == 1) {
+      this.punaSelected = true;
+      this.vleresimeSelected = false;
+      this.kompaniaSelected = false;
+    } else if (i == 2) {
+      this.kompaniaSelected = true;
+      this.punaSelected = false;
+      this.vleresimeSelected = false;
+    } else {
+      this.kompaniaSelected = false;
+      this.punaSelected = false;
+      this.vleresimeSelected = true;
+    }
   }
 
 }

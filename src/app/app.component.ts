@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
@@ -13,40 +13,48 @@ import { Router } from '@angular/router';
 export class AppComponent {
   public sidemenuLayout1 = [
     {
-      title: 'Home',
+      title: 'Kreu',
       icon: 'home',
-      active: true
+      active: true,
+      router: ""
     },
     {
-      title: 'My Wallet',
-      icon: 'wallet'
+      title: 'Donator',
+      icon: 'person',
+      router: "donator"
     },
     {
-      title: 'History',
-      icon: 'time'
+      title: 'Vullnetar',
+      icon: 'people',
+      router: "vullnetar"
     },
     {
-      title: 'Notif',
-      icon: 'notifications'
+      title: 'Dhuro',
+      icon: 'gift',
+      router: "donator"
     },
     {
-      title: 'Invite',
-      icon: 'gift'
+      title: 'Kontakt',
+      icon: 'paper-plane',
+      router: "donator"
     },
     {
-      title: 'Settings',
-      icon: 'settings'
+      title: 'Opsione',
+      icon: 'settings',
+      router: "donator"
     },
     {
-      title: 'Logout',
-      icon: 'log-out'
+      title: 'Dilni',
+      icon: 'log-out',
+      router: "login"
     },
   ];
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private router: Router
+    private router: Router,
+    private mc: MenuController
   ) {
     this.initializeApp();
     window.addEventListener('offline', () => {
@@ -59,5 +67,9 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+  openPage(i){
+    this.router.navigate([i.router]);
+    this.mc.close();
   }
 }

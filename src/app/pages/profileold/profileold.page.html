@@ -1,9 +1,74 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>profileold</ion-title>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Më Ndihmo</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content color="light">
+  <div id="header">
+    <ion-img id="jobavatar" src="../../../assets/oldman.jpg"></ion-img>
+    <ion-label><strong>John Doe</strong><br><em>Pensionist</em></ion-label>
+  </div>
+  <ion-segment scrollable padding color="danger">
+    <ion-segment-button checked (ionSelect)="segmentButtonClicked(1)">
+      <ion-label>
+        <strong>Përshkrimi</strong>
+      </ion-label>
+    </ion-segment-button>
+    <ion-segment-button (ionSelect)="segmentButtonClicked(2)">
+      <ion-label>
+        <strong>Familja</strong>
+      </ion-label>
+    </ion-segment-button>
+    <ion-segment-button (ionSelect)="segmentButtonClicked(3)">
+      <ion-label>
+        <strong>Vullnetarë</strong>
+      </ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div class="ion-padding" *ngIf="punaSelected" [innerHtml]="job?.data.description">
+    <ion-text color="medium">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.
+    </ion-text>
+  </div>
+  <div *ngIf="kompaniaSelected" class="ion-padding">
+    <ion-text color="primary">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.
+    </ion-text>
+  </div>
+  <div *ngIf="vleresimeSelected" padding>
+    <ion-text color="warning">
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.
+    </ion-text>
+  </div>
 </ion-content>
+<ion-footer mode="ios">
+  <ion-toolbar color="light">
+    <ion-buttons>
+      <ion-button size="large" id="apliko" mode="ios" fill="outline" color="danger" (click)="apliko($event)">
+        Dhuro
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

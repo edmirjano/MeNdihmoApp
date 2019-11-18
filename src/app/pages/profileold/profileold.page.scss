@@ -1,0 +1,45 @@
+ion-icon {
+    font-size: 20px; 
+  }
+  #header {
+    height: 200px !important;
+    text-align: center;
+  }
+  #jobavatar {
+    padding-top: 25px;
+    height: 120px;
+    width: auto;
+  }
+  #apliko {
+    --border-radius: 10px;
+    --background: white;
+    --color-activated: #488aff !important;
+    --color-focused: black;
+    height: 50px;
+    width: 200px;
+  }
+  #ruaj {
+    --border-radius: 10px;
+    padding-right: 20%;
+    padding-left: 5%;
+  }
+  #heart {
+    font-size: 20px;
+  }
+  #puna {
+    padding: 10px !important;
+    text-justify: left;
+    font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  }
+  #apliko:hover {
+    color: black !important;
+  }
+  #apliko.hover {
+    color: black !important;
+  }
+  #companylink {
+    float: right;
+    padding: 32px;
+    text-decoration-line: underline;
+  }
+  

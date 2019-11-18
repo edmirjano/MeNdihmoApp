@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
-
+import { CallNumber } from '@ionic-native/call-number/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -18,7 +18,8 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder/ngx';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    NativeGeocoder
+    NativeGeocoder,
+    CallNumber
   ],
   bootstrap: [AppComponent]
 })
