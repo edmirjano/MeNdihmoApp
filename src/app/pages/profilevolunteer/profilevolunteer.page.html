@@ -1,9 +1,68 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>profilevolunteer</ion-title>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Më Ndihmo</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content color="light">
+  <div id="header">
+    <ion-img id="jobavatar" src="../../../assets/vol.jpg"></ion-img>
+    <ion-label><strong>Theresa Austin</strong><br><em>Ekonomiste</em></ion-label>
+  </div>
+  <ion-list-header color="primary">
+    <ion-label>Përshkrimi</ion-label>
+  </ion-list-header>
+  <div class="ion-padding">
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
+      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
+      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
+      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
+      of Lorem Ipsum.
+    </p>
+  </div>
+  <ion-list-header color="danger">
+    <ion-label>Persona nën administrim</ion-label>
+  </ion-list-header>
+  <ion-list class="ion-padding">
+    <ion-item *ngFor="let item of [1,1,1]" (click)="openOld()">
+      <ion-avatar slot="start">
+        <img src="./../../../assets/oldman.jpg" />
+      </ion-avatar>
+      <ion-label>John Doe</ion-label>
+      <ion-icon name="add"></ion-icon>
+    </ion-item>
+  </ion-list> <ion-list-header color="warning">
+    <ion-label>Kontakto</ion-label>
+  </ion-list-header>
+  <ion-grid fixed class="ion-padding">
+    <ion-row>
+      <ion-col size="6">Tel: 0969696852</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="6">Email: teste.gmail.com</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="9">Adresa: Blv. Deshmoret e kombit Tirana Albania</ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-footer no-border>
+    <ion-toolbar color="light">
+      <ion-label>
+        <ion-text style="text-align: center;    font-size: 10px;">
+          <div>Versioni 1.0.1</div>
+        </ion-text>
+        <ion-text style="text-align: center;    font-size: 10px;">
+          <div> ©  EP .All Rights Reserved</div>
+        </ion-text>
+      </ion-label>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profileold',
@@ -10,8 +11,8 @@ export class ProfileoldPage implements OnInit {
   punaSelected = true;
   vleresimeSelected = false;
   kompaniaSelected = false;
-  
-  constructor() { }
+
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
@@ -29,6 +30,9 @@ export class ProfileoldPage implements OnInit {
       this.punaSelected = false;
       this.vleresimeSelected = true;
     }
+  }
+  openVol() {
+    this.router.navigate(['profilevolunteer']);
   }
 
 }

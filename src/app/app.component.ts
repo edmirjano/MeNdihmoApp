@@ -26,7 +26,7 @@ export class AppComponent {
     {
       title: 'Vullnetar',
       icon: 'people',
-      router: "vullnetar"
+      router: "volunteer"
     },
     {
       title: 'Dhuro',

@@ -1,9 +1,26 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>volunteer</ion-title>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Më Ndihmo</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content color="light">
+  <ion-list-header class="ion-padding">
+    <ion-label>lista e vullnetarëve</ion-label>
+  </ion-list-header>
+  <ion-list class="ion-padding">
+    <ion-item *ngFor="let item of [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]" (click)="openOld()">
+      <ion-avatar slot="start">
+        <img src="./../../../assets/vol.jpg" />
+      </ion-avatar>
+      <ion-label>Theresa Johnson</ion-label>
+      <ion-icon name="add"></ion-icon>
+    </ion-item>
+  </ion-list>
 </ion-content>

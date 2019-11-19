@@ -53,14 +53,15 @@
     </ion-text>
   </div>
   <div *ngIf="vleresimeSelected" padding>
-    <ion-text color="warning">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
-      standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
-      type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting,
-      remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing
-      Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions
-      of Lorem Ipsum.
-    </ion-text>
+    <ion-list class="ion-padding">
+      <ion-item *ngFor="let item of [1,1,1,1]" (click)="openVol()">
+        <ion-avatar slot="start">
+          <img src="./../../../assets/vol.jpg" />
+        </ion-avatar>
+        <ion-label>Theresa Austin</ion-label>
+        <ion-icon name="add"></ion-icon>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
 <ion-footer mode="ios">
