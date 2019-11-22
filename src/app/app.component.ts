@@ -19,24 +19,24 @@ export class AppComponent {
       router: ""
     },
     {
-      title: 'Donator',
+      title: 'Për Donator',
       icon: 'person',
       router: "donator"
     },
     {
-      title: 'Vullnetar',
+      title: 'Për Vullnetar',
       icon: 'people',
       router: "volunteer"
     },
     {
       title: 'Dhuro',
       icon: 'gift',
-      router: "donator"
+      router: "donate"
     },
     {
       title: 'Kontakt',
       icon: 'paper-plane',
-      router: "donator"
+      router: "contact"
     },
     {
       title: 'Opsione',
@@ -69,6 +69,7 @@ export class AppComponent {
     });
   }
   openPage(i){
+    
     this.router.navigate([i.router]);
     this.mc.close();
   }

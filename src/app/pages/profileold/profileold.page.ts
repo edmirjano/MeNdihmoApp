@@ -34,5 +34,7 @@ export class ProfileoldPage implements OnInit {
   openVol() {
     this.router.navigate(['profilevolunteer']);
   }
-
+  Dhuro(e){
+    this.router.navigate(['donate']);
+  }
 }

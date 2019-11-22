@@ -13,7 +13,9 @@ const routes: Routes = [
   { path: 'profilevolunteer', loadChildren: './pages/profilevolunteer/profilevolunteer.module#ProfilevolunteerPageModule' },
   { path: 'login', loadChildren: './pages/login/login.module#LoginPageModule' },
   { path: 'home', loadChildren: './pages/home/home.module#HomePageModule' },
-  { path: 'oldlist', loadChildren: './pages/oldlist/oldlist.module#OldlistPageModule' }
+  { path: 'oldlist', loadChildren: './pages/oldlist/oldlist.module#OldlistPageModule' },
+  { path: 'donate', loadChildren: './pages/donate/donate.module#DonatePageModule' },
+  { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' }
 ];
 
 @NgModule({

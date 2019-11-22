@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="medium">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Më Ndihmo</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light" class="ion-padding">
+  <h2 class="ion-padding">Ju lutemi plotësoni fushat e mëposhtme!</h2>
+  <ion-list mode="ios">
+    <ion-item lines="none">
+      <ion-label position="floating">Emri <ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-list mode="ios">
+    <ion-item lines="none">
+      <ion-label position="floating">Mbiemri<ion-text color="danger">*</ion-text>
+      </ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+  </ion-list>
+  <ion-list mode="ios">
+          <ion-item lines="none">
+            <ion-label position="floating">Përshkrimi
+            </ion-label>
+            <ion-textarea></ion-textarea>
+          </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer mode="ios">
+  <ion-toolbar color="light">
+    <ion-buttons>
+      <ion-button size="large" id="apliko" mode="ios" fill="outline" color="danger" (click)="Dhuro($event)">
+        <ion-icon slot="icon-only" name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
