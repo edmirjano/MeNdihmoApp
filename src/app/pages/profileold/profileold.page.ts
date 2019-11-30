@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Plugins } from '@capacitor/core';
+const { Share } = Plugins;
 
 @Component({
   selector: 'app-profileold',
@@ -34,7 +36,14 @@ export class ProfileoldPage implements OnInit {
   openVol() {
     this.router.navigate(['profilevolunteer']);
   }
-  Dhuro(e){
+  Dhuro(e) {
     this.router.navigate(['donate']);
+  }
+  async share() {
+    let shareRet = await Share.share({
+      title: 'Dikush ka nevoje per ju!',
+      text: 'John Doe, pensionist',
+      dialogTitle: 'Dhuroni per John Doe'
+    });
   }
 }

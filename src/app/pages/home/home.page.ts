@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Plugins } from '@capacitor/core';
 import { CallNumber } from '@ionic-native/call-number/ngx';
 import { NativeGeocoder, NativeGeocoderResult, NativeGeocoderOptions } from '@ionic-native/native-geocoder/ngx';
-
+import { AlertController } from '@ionic/angular';
+import { PayPal, PayPalPayment, PayPalConfiguration } from '@ionic-native/paypal/ngx';
 const { Geolocation } = Plugins;
 
 const { Modals } = Plugins;
@@ -20,7 +21,7 @@ export class HomePage implements OnInit {
 
   adres = '';
 
-  constructor(private nativeGeocoder: NativeGeocoder,private callNumber: CallNumber) {
+  constructor(private nativeGeocoder: NativeGeocoder, private callNumber: CallNumber, public alertController: AlertController, private paypal: PayPal) {
     let options: NativeGeocoderOptions = {
       useLocale: true,
       maxResults: 5
@@ -53,26 +54,39 @@ export class HomePage implements OnInit {
   }
 
   async alarm() {
-    let confirmRet = await Modals.confirm({
-      title: 'Confirm',
-      message: 'Are you sure you\'d like to press the red button?'
-    });
-    console.log('Confirm ret', confirmRet);
+    this.presentAlertConfirm();
   }
 
   callPolice() {
     this.callNumber.callNumber("129", true)
-  .then(res => console.log('Launched dialer!', res))
-  .catch(err => console.log('Error launching dialer', err));
+      .then(res => console.log('Launched dialer!', res))
+      .catch(err => console.log('Error launching dialer', err));
   }
   callFire() {
-    this.callNumber.callNumber("00355696382292", true)
-    .then(res => console.log('Launched dialer!', res))
-    .catch(err => console.log('Error launching dialer', err));
+    this.callNumber.callNumber("127", true)
+      .then(res => console.log('Launched dialer!', res))
+      .catch(err => console.log('Error launching dialer', err));
   }
   callDoc() {
-
+    this.callNumber.callNumber("00355690000000", true)
+      .then(res => console.log('Launched dialer!', res))
+      .catch(err => console.log('Error launching dialer', err));
   }
+  async presentAlertConfirm() {
+    const alert = await this.alertController.create({
+      header: 'U Njoftuan!',
+      message: 'Njoftuam Familjarët, Mjekun dhe Vullentarët, Ata do të jenë së shpejti pranë jush! ',
+      buttons: [
+        {
+          text: 'Në rregull',
+          handler: () => {
+            console.log('Confirm Okay');
+          }
+        }
+      ]
+    });
 
+    await alert.present();
+  }
 
 }

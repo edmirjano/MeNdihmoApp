@@ -1,6 +1,6 @@
 {
-  "appId": "com.edi.health",
-  "appName": "HealthCare",
+  "appId": "com.edi.helpme",
+  "appName": "Me Ndihmo",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

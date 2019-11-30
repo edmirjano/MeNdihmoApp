@@ -8,28 +8,39 @@
 </ion-header>
 
 <ion-content padding color="light">
-  <div class="ion-padding">
+  <div>
     <div class="ion-padding">
-      <ion-img src="../../../assets/logotranspar.png" class="ion-padding"></ion-img>
+      <ion-img src="../../../assets/Webp.net-resizeimage.png" class="ion-padding"></ion-img>
     </div>
   </div>
-  <ion-list class="ion-padding" >
-    <ion-input placeholder="Emri juaj" color="danger"></ion-input>
-  </ion-list>
+  <p>//test@gmail.com //testtest</p>
+  <div padding>
+      <ion-item>
+        <ion-input name="email" type="email" placeholder="Email" [(ngModel)]="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input name="password" type="password" placeholder="Fjal&#235;kalimi" [(ngModel)]="pass"
+          required></ion-input>
+      </ion-item>
+    </div>
   <ion-grid fixed class="ion-padding">
     <ion-row class="ion-padding">
       <ion-col>
       </ion-col>
       <ion-col>
-        <ion-button (click)="alarm()" color="danger" size="large" expand="block" strong>
-          Rregjistrohu
+        <ion-button (click)="login()" color="danger" size="large" expand="block" strong>
+          Logohu
         </ion-button>
       </ion-col>
       <ion-col>
       </ion-col>
     </ion-row>
   </ion-grid>
-  <div text-right padding>
-      <a id="registerLink" [routerLink]="['/register']" routerLinkActive="router-link-active">Logohu si Donator/Vullnetar</a>
-    </div>
+  <ion-footer no-border>
+      <ion-toolbar color="light">
+        <p id="registerLink" [routerLink]="['/register']" routerLinkActive="router-link-active">Nuk keni llogari?
+          Rregjistrohuni</p>
+      </ion-toolbar>
+    </ion-footer>
 </ion-content>
+

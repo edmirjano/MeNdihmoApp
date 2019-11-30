@@ -16,7 +16,7 @@
     <ion-label><strong>John Doe</strong><br><em>Pensionist</em></ion-label>
   </div>
   <ion-segment scrollable padding color="danger">
-    <ion-segment-button checked (ionSelect)="segmentButtonClicked(1)">
+    <ion-segment-button (ionSelect)="segmentButtonClicked(1)" checked>
       <ion-label>
         <strong>Përshkrimi</strong>
       </ion-label>
@@ -32,7 +32,7 @@
       </ion-label>
     </ion-segment-button>
   </ion-segment>
-  <div class="ion-padding" *ngIf="punaSelected" [innerHtml]="job?.data.description">
+  <div class="ion-padding" *ngIf="punaSelected">
     <ion-text color="medium">
       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
       standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a
@@ -63,6 +63,11 @@
       </ion-item>
     </ion-list>
   </div>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="success" (click)="share()">
+      <ion-icon name="share"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
 <ion-footer mode="ios">
   <ion-toolbar color="light">

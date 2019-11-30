@@ -4,6 +4,10 @@ import { Platform, MenuController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { Router } from '@angular/router';
+import { Plugins } from '@capacitor/core';
+
+const { Storage } = Plugins;
+
 
 @Component({
   selector: 'app-root',
@@ -41,7 +45,7 @@ export class AppComponent {
     {
       title: 'Opsione',
       icon: 'settings',
-      router: "donator"
+      router: "settings"
     },
     {
       title: 'Dilni',
@@ -68,9 +72,16 @@ export class AppComponent {
       this.splashScreen.hide();
     });
   }
-  openPage(i){
-    
+  openPage(i) {
+
     this.router.navigate([i.router]);
+    this.sidemenuLayout1.forEach(e => {
+      if (e.title == i.title) {
+        e.active = true;
+      } else {
+        e.active = false;
+      }
+    });
     this.mc.close();
   }
 }
